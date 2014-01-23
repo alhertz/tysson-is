@@ -1,8 +1,4 @@
 $(document).ready(function() {
-  // Load phrase and post button
-  $( "#phrase" ).delay( 1500 ).fadeIn( 500, function() {
-    $('#post').delay( 1500 ).fadeIn(500);
-  });
   // Load Facebook Javascript SDK
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/en_UK/all.js', function(){
@@ -19,7 +15,7 @@ $(document).ready(function() {
     // Show Create Form on Say Something Else Click
     $( "#create" ).click(function() {
       $( "#post" ).fadeOut( 500, function() {
-        $( "#createForm" ).fadeIn();
+        $( "#createForm" ).fadeIn(500);
       });
       // Update #caption DOM Element on input 
       $("#createFormInput").on("keyup change", function() {

@@ -47,6 +47,10 @@
     $
     // anchor.appendChild( document.createTextNode( supported ? 'Play' : 'Close' ) );
     dancer.play();
+    // Load phrase and post button
+    $( "#phrase" ).delay( 4700 ).fadeIn( 500, function() {
+      $('#post').delay( 1500 ).fadeIn(500);
+    });
     $( '#pause' ).css( "display", "block" );
     anchor.setAttribute( 'href', '#' );
     loading.innerHTML = '';

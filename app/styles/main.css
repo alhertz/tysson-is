@@ -197,8 +197,9 @@ input[type="submit"]:hover {
   margin-top: .25em;
 }
 /* Mobile Version */
-@media (max-device-width: 480px) {
-  #phrase h1 {
+
+@media all and (max-width: 480px) {
+  #caption {
     font-size: 1.0em;
   }
 }
