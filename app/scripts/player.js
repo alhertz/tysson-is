@@ -17,11 +17,11 @@
   dancer = new Dancer();
   kick = dancer.createKick({
     onKick: function () {
-      ctx.strokeStyle = '#000';
+      ctx.strokeStyle = '#FFF';
       $( '#static' ).css( "opacity", "1.0" );
     },
     offKick: function () {
-      ctx.strokeStyle = '#000';
+      ctx.strokeStyle = '#FFF';
       $( '#static' ).css( "opacity", "1.0" );
     }
   }).on();
@@ -46,7 +46,6 @@
       p;
     $
     // anchor.appendChild( document.createTextNode( supported ? 'Play' : 'Close' ) );
-    dancer.play();
     anchor.setAttribute( 'href', '#' );
     loading.innerHTML = '';
     loading.appendChild( anchor );
@@ -57,6 +56,8 @@
       p.appendChild( document.createTextNode( 'Your browser does not currently support either Web Audio API or Audio Data API. The audio may play, but the visualizers will not move to the music; check out the latest Chrome or Firefox browsers!' ) );
       loading.appendChild( p );
     }
+
+    $( '#play' ).css( "display", "block" );
 
     // Set Up Initial Play button
     anchor.addEventListener( 'click', function () {

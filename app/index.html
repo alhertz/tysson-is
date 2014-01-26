@@ -12,24 +12,36 @@
     <meta name="description" content="TYSSON is">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="TYSSON is"/>
-    <meta property="og:image" content="http://i.imgur.com/uDDjkz8.jpg"/>
+    <meta property="og:image" content="http://tyssonband.com/images/tysson-logo-1500x1500.jpg"/>
     <meta property="og:site_name" content="TYSSON is"/>
     <meta property="og:description" content="TYSSON is"/>
     <link rel="icon" type="image/png" href="favicon.png">
 
     <!--Font Awesome -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!--Typekit-->
+    <script type="text/javascript" src="//use.typekit.net/dog6dcv.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel='stylesheet' href='styles/animations.css'>
     <link rel="stylesheet" href="styles/main.css">
     <link rel='stylesheet' href='styles/dancer.css'>
     <!-- endbuild -->
 
   </head>
   <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    
+    <!--Logo-->
+    <div id="logo">
+      <img src="images/logo.png">
+    </div>
+
+    <!--Social-->
+    <div id="social">
+     <div id="refresh" class="pulse">Refresh Me</div>
+    </div>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -64,12 +76,12 @@
       <div class="controls">
         <div id="loading"><i class="fa fa-refresh fa-spin"></i></div>
         <a id="pause"><i class="fa fa-pause"></i></a>
-        <a id="play"><i class="fa fa-play"></i></a>
+        <a id="play" class="pulse"><i class="fa fa-play"></i></a>
       </div>
     </div>
 
     <div class="pug">
-      <img src="images/pug.png">
+      <a href="mailto: tysson@redlightmanagement.com"><img src="images/pug.png"></a>
     </div>
 
   <!-- build:js scripts/vendor.js -->

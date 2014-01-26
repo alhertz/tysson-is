@@ -1,9 +1,7 @@
 $(document).ready(function() {
   // Load phrase and post button
-  $( "#phrase" ).fadeIn( 500, function() {
-    $('#post').delay( 1500 ).fadeIn(500);
+  $( "#phrase" ).delay(500).fadeIn( 1500, function() {
   });
-  $( '#pause' ).css( "display", "block" );
   // Load Facebook Javascript SDK
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/en_UK/all.js', function(){
