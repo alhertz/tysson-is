@@ -18,17 +18,16 @@
   kick = dancer.createKick({
     onKick: function () {
       ctx.strokeStyle = '#FFF';
-      $( '#static' ).css( "opacity", "1.0" );
     },
     offKick: function () {
       ctx.strokeStyle = '#FFF';
-      $( '#static' ).css( "opacity", "1.0" );
+      $( 'body' ).css( "background", "#92B4D3" );
     }
   }).on();
 
   dancer
     .load({ src: AUDIO_FILE, codecs: [ 'ogg', 'mp3' ]})
-    .waveform( waveform, { strokeStyle: '#000', strokeWidth: 1 });
+    .waveform( waveform, { strokeStyle: '#FFF', strokeWidth: 1 });
 
   Dancer.isSupported() || loaded();
   !dancer.isLoaded() ? dancer.bind( 'loaded', loaded ) : loaded();
@@ -45,7 +44,6 @@
       supported = Dancer.isSupported(),
       p;
     $
-    // anchor.appendChild( document.createTextNode( supported ? 'Play' : 'Close' ) );
     anchor.setAttribute( 'href', '#' );
     loading.innerHTML = '';
     loading.appendChild( anchor );

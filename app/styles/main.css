@@ -108,9 +108,14 @@ a:hover {
   margin: 1.0em;
   margin-top: 1.25em;
   font-size: 1.5em;
+  z-index: 9;
 }
 #social a {
   color: #FFF;
+}
+#refresh:hover {
+  cursor: pointer;
+  color: #EEE;
 }
 #thanks,
 #nope {
@@ -202,8 +207,14 @@ input[type="submit"]:hover {
   bottom: 0;
   right: 0;
   margin: 2.0em;
+  z-index: 9;
 }
-
+.pug a {
+  display: block;
+}
+.pug a:hover {
+  opacity: .8;
+}
 .pug img {
   width: 40px;
 }
@@ -234,7 +245,40 @@ input[type="submit"]:hover {
 /* Mobile Version */
 
 @media all and (max-width: 480px) {
+  body {
+    padding: 1.0em;
+  }
+  #phrase {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    top: 0;
+    margin-top: 40px;
+    left: 0;
+    padding-top: 2.0em;
+  }
   #caption {
     font-size: 1.0em;
+  }
+  a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #refresh {
+    display: none;
+  }
+  #phrase #prompt {
+    font-size: 18px;
+  }
+  #logo {
+    top: 0;
+    left: 0;
+    margin: 2.0em 0;
+    width: 100%;
+    text-align: center;
+    opacity: .5;
+  }
+  .pug img {
+    width: 20px;
   }
 }

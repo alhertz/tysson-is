@@ -1,6 +1,12 @@
 $(document).ready(function() {
   // Load phrase and post button
-  $( "#phrase" ).delay(500).fadeIn( 1500, function() {
+  $( "#phrase" ).delay(500).fadeIn( 150);
+  // Refresh
+  $('#refresh').click(function() {
+    $.getJSON('scripts/data.json', function(data) {
+      var phrase = data.phrases[Math.floor(Math.random()*data.phrases.length)];
+      $( "#caption" ).replaceWith('<h1 id="caption">Tysson is ' + phrase.caption + '</h1>');
+    });
   });
   // Load Facebook Javascript SDK
   $.ajaxSetup({ cache: true });
@@ -33,7 +39,7 @@ $(document).ready(function() {
            name: 'TYSSON is',
            description: value,
            link: 'https://tysson.is',
-           picture: 'http://i.imgur.com/uDDjkz8.jpg'
+           picture: 'http://tyssonband.com/images/tysson-logo-1500x1500.jpg'
           },
           function(response) {
             if (response && response.post_id) {
