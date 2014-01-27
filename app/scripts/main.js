@@ -38,7 +38,7 @@ $(document).ready(function() {
            method: 'feed',
            name: 'TYSSON is',
            description: value,
-           link: 'https://tysson.is',
+           link: 'http://tysson.is',
            picture: 'http://tyssonband.com/images/tysson-logo-1500x1500.jpg'
           },
           function(response) {
@@ -64,8 +64,8 @@ $(document).ready(function() {
          method: 'feed',
          name: 'TYSSON is',
          description: phrase.caption,
-         link: 'https://tysson.is',
-         picture: 'http://i.imgur.com/uDDjkz8.jpg'
+         link: 'http://tysson.is',
+         picture: 'http://tyssonband.com/images/tysson-logo-1500x1500.jpg'
         },
         function(response) {
           if (response && response.post_id) {
