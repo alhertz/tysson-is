@@ -21,7 +21,6 @@
     },
     offKick: function () {
       ctx.strokeStyle = '#FFF';
-      $( 'body' ).css( "background", "#92B4D3" );
     }
   }).on();
 
@@ -55,13 +54,16 @@
       loading.appendChild( p );
     }
 
-    $( '#play' ).css( "display", "block" );
+    $( '#play' ).css( "display", "block", "visibility", "hidden");
+    $( '#play' ).addClass( "fadeIn" );
 
     // Set Up Initial Play button
     anchor.addEventListener( 'click', function () {
       dancer.play();
       document.getElementById('loading').style.display = 'none';
       $( '#pause' ).css( "display", "block" );
+      $( 'body' ).css( "background", "#92B4D3" );
+      $( '#play' ).removeClass( "fadeIn" );
     });
 
     // Set Up Pause Button
@@ -69,6 +71,7 @@
       dancer.pause();
       $( '#play' ).css( "display", "block" );
       $( '#pause' ).css( "display", "none" );
+      $( 'body' ).css( "background", "#A6C7E9" );
     });
 
     // Set Up Play Button
@@ -76,6 +79,7 @@
       dancer.play();
       $( '#pause' ).css( "display", "block" );
       $( '#play' ).css( "display", "none" );
+      $( 'body' ).css( "background", "#92B4D3" );
     });
   }
 
