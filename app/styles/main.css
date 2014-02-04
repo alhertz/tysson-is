@@ -72,7 +72,22 @@ a:hover {
   text-transform: uppercase;
   line-height: 1.0;
 }
-
+#rsvp {
+  text-decoration: none;
+  margin-top: 100px;
+  color: #FFF;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 300px;
+  text-align: center;
+  margin-left: -150px;
+  margin-bottom: 2.0em;
+  text-transform: uppercase;
+  font-family: "Proxima-Nova";
+  font-size: 18px;
+  letter-spacing: 1px;
+}
 #phrase #prompt {
   font-size: 24px;
   line-height: 1.5;
